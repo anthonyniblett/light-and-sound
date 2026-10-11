@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anthony Niblett’s amazing light and sound quiz</title>
+<meta name="description" content="How many of the 100 questions can you get right?!!?">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/png" href="icons/icon32.png">
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+<div class="page">
+
+  <header class="masthead">
+    <h1 class="title">Anthony Niblett’s amazing light and sound quiz</h1>
+    <div class="subhead">
+    <p class="byline">How many of the 100 questions can you get right?!!?</p>
+    <button type="button" class="sound-toggle" id="soundToggle" aria-pressed="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M3 9.5v5h4l5 4.5V5L7 9.5H3z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        <g class="icon-waves" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M15.5 9a4.2 4.2 0 0 1 0 6"/>
+          <path d="M18.4 6.3a8 8 0 0 1 0 11.4"/>
+        </g>
+        <g class="icon-x" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <path d="M16 9.2l5 5.6M21 9.2l-5 5.6"/>
+        </g>
+      </svg>
+      <span id="soundLabel">Sound on</span>
+    </button>
+    </div>
+    <div class="rule" aria-hidden="true">
+      <svg class="rule-lg" width="100%" height="40" focusable="false">
+        <path d="M2 20H26q5.5-10 11 0t11 0t11 0t11 0t11 0t11 0t11 0t11 0q5.5-28 11 0t11 0t11 0t11 0t11 0t11 0t11 0t11 0q2-28 4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0H9000"/>
+      </svg>
+      <svg class="rule-sm" width="100%" height="25" focusable="false">
+        <path transform="scale(.625)" d="M2 20H26q5.5-10 11 0t11 0t11 0t11 0t11 0t11 0t11 0t11 0q5.5-28 11 0t11 0t11 0t11 0t11 0t11 0t11 0t11 0q2-28 4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0H9000"/>
+      </svg>
+    </div>
+  </header>
+
+  <main class="stage">
+    <div class="main-col">
+      <ul class="tally tally--row" aria-label="Your score so far">
+        <li><b data-count="right">0</b> right</li>
+        <li><b data-count="wrong">0</b> wrong</li>
+        <li><b data-count="togo">100</b> to go</li>
+      </ul>
+      <section class="card" id="card" aria-label="Quiz question">
+        <noscript><p>This quiz needs JavaScript. Turn it on in your browser, then reload the page.</p></noscript>
+      </section>
+    </div>
+
+    <aside class="side-col" aria-label="Your score so far">
+      <div class="meter-box">
+        <ol class="meter-scale" id="meterScale" aria-hidden="true"></ol>
+        <div class="meter" id="meter" role="img" aria-label="0 right out of 100">
+          <div class="meter-cover" id="meterCover"></div>
+          <div class="meter-tip" id="meterTip"></div>
+          <div class="meter-ticks" id="meterTicks"></div>
+        </div>
+      </div>
+      <ul class="tally tally--stack">
+        <li><b data-count="right">0</b> right</li>
+        <li><b data-count="wrong">0</b> wrong</li>
+        <li><b data-count="togo">100</b> to go</li>
+      </ul>
+    </aside>
+  </main>
+
+  <p class="sr-only" id="announce" aria-live="polite"></p>
+</div>
+<script src="questions.js"></script>
+<script src="quiz.js"></script>
+
+</body>
+</html>
